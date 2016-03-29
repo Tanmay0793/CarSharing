@@ -1,0 +1,58 @@
+﻿body 
+{
+
+    height:500px;   
+    
+}
+#back {
+    background-image:url('/../Files/My/Back.jpg');
+    height:600px;
+    background-repeat:no-repeat;
+    background-position:center center;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+}
+.container-fluid {
+margin-top:50px;
+
+}
+
+
+#divRideback {
+    background-image:url('/../Files/My/Back.jpg');
+
+    background-repeat:no-repeat;
+    background-position:center center;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+
+}
+.navbar {
+      height:50px;
+      padding-top: 0;
+      padding-bottom: 0;
+      border: 0;
+      background-color:#2d2d30;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px !important;
+      letter-spacing: 3px;
+      
+  }
+  .navbar-nav  li a:hover {
+      color: whitesmoke !important;
+  }
+
+.panel-info > .form-group {
+    
+    margin-bottom:40px;
+
+}
+panel {
+padding-top:20px;    
+
+}

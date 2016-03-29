@@ -1,0 +1,49 @@
+﻿body
+{
+       background-color:gray;
+        background-repeat:no-repeat;
+        background-position:center center;
+        background-attachment:fixed;
+        -webkit-background-size:cover;
+        -moz-background-size:cover;
+        -o-background-size:cover;
+        background-size:cover;
+
+    
+}
+#header {
+    
+    margin-bottom:10px;
+    height:50px;
+    background-image:url("../Files/img/natural_paper.png");
+    text-align:center;
+    font-family:Verdana;
+    font-weight:bolder;
+    
+    top:inherit;
+}
+
+.text-center {
+    text-align: left;
+}
+.panel {
+    
+    width:auto;
+    border:double;  
+    background-color: rgba(243, 237, 237, 0.39);
+    color:white !important;
+    height:auto;
+}
+.panel-heading {
+    text-decoration:underline;
+     margin-top:auto;
+    text-align:center;
+    font-weight:bold;
+    font-size:xx-large;
+    color:black;
+    line-height:normal;
+}
+.panel-body {
+    font-weight:bolder;
+    color:black;
+}

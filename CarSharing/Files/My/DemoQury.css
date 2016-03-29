@@ -1,0 +1,19 @@
+﻿.container-fluid {
+    margin-top:45px
+}
+
+#divMain {
+    height:70px;
+    background-color:wheat;
+    margin-bottom:10px
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+#first {
+    height:200px;
+    font-size:13px;
+    background-color:whitesmoke;
+    margin-bottom:10px
+}

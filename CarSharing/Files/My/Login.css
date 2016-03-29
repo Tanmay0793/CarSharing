@@ -1,0 +1,13 @@
+﻿
+
+#divBack {
+ background-image:url('/../Files/My/Login.jpg');
+    height:657px;
+    background-repeat:no-repeat;
+    background-position:center center;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    padding-top:50px;
+}
