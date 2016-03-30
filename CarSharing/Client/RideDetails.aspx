@@ -19,78 +19,7 @@
     </style>
 </head>
 <body>
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
-    <script type="text/javascript">
-        var source, destination;
-        var directionsDisplay;
-        var directionsService = new google.maps.DirectionsService();
-
-        var qs = (function (a) {
-            if (a == "") return {};
-            var b = {};
-            for (var i = 0; i < a.length; ++i) {
-                var p = a[i].split('=', 2);
-                if (p.length == 1)
-                    b[p[0]] = "";
-                else
-                    b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
-            }
-            return b;
-        })(window.location.search.substr(1).split('&'));
-
-
-
-        google.maps.event.addDomListener(window, 'load', function () {
-            directionsDisplay = new google.maps.DirectionsRenderer({ 'draggable': true });
-
-
-
-
-            var pune = new google.maps.LatLng(18.5204, 73.8567);
-            var mapOptions = {
-                zoom: 7,
-                center: pune
-            };
-            map = new google.maps.Map(document.getElementById('divMap'), mapOptions);
-            directionsDisplay.setMap(map);
-
-            source = qs["from"];
-            destination = qs["to"];
-
-
-            var request = {
-                origin: source,
-                destination: destination,
-                travelMode: google.maps.TravelMode.DRIVING
-            };
-
-            directionsService.route(request, function (response, status) {
-                if (status == google.maps.DirectionsStatus.OK) {
-                    directionsDisplay.setDirections(response);
-                }
-            });
-
-            var service = new google.maps.DistanceMatrixService();
-            service.getDistanceMatrix({
-                origins: [source],
-                destinations: [destination],
-                travelMode: google.maps.TravelMode.DRIVING,
-                unitSystem: google.maps.UnitSystem.METRIC,
-                avoidHighways: false,
-                avoidTolls: false
-            }, function (response, status) {
-                if (status == google.maps.DistanceMatrixStatus.OK && response.rows[0].elements[0].status != "ZERO_RESULTS") {
-
-                } else {
-                    alert("Unable to find the distance via road.");
-                }
-            });
-
-        });
-
-    </script>
-
-   <form id="form1" runat="server">
+    <form id="form1" runat="server">
     <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -186,7 +115,6 @@
                                <div class="col-lg-4">
                                    <asp:Label ID="lblphone" runat="server"></asp:Label>
                                </div>
-
                            </div>
                            <div class="form-group">
                                <label class="col-lg-2">Comment :</label>
@@ -198,38 +126,24 @@
                                <label class="col-lg-3">Enter no of Seats :</label>
                                <div class="col-lg-3">
                                    <asp:TextBox ID="txtseats" class="form-control" runat="server"></asp:TextBox>
+                                   
                                </div>
                                <div class="col-lg-6"></div>
                            </div>
-                           
                            <div class="form-group">
-                               
                                 <div class="col-lg-10" style="margin-top:25px;margin-bottom:25px">
                                     <asp:Button ID="btnRegister" style="float:right" runat="server" class="btn btn-success" OnClick="btnRegister_Click" Text="Request For Ride" />
                                 </div>  
                            </div>
-                           
                          </div>
                        </div>
-                      <div class="col-lg-1">
-                          <div style="border-left:medium #CC0000 solid;height:320px;margin-top:35px"> </div>
-                      </div>
-                       <div class="col-lg-2" style="background-color:white;height:50px">     
-                           <div class="form-group">
-                             
-                              <p class="centered"><a href="Profile.aspx">
+                       <div class="col-lg-3" style="text-align:center">     
+                              <p style="margin-left:30%;margin-top:10%"><a href="Profile.aspx">
                               <asp:Image ID="image1" class="img-responsive" ImageUrl="~/Files/img/friends/fr-07.jpg" Width="150" runat="server" /></a></p>
-                             <ul>
-                                 
-                                 <asp:Label ID="lblname" Font-Bold="true" runat="server"></asp:Label>
-                                
-                                    <a href="Profile.aspx" class="btn btn-info btn-lg">View Profile</a>
-                                
-                            </ul>
-                             
-                           
-                           </div>
-
+                            <ul>                                 
+                                 <asp:Label ID="lblname" Font-Bold="true" runat="server"></asp:Label><br />
+                                 <a href="Profile.aspx" class="btn btn-info btn-lg">View Profile</a>
+                            </ul>  
                        </div>
                    </div>
                </div>
@@ -239,5 +153,77 @@
     <footer>
         
     </footer>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+    <script type="text/javascript">
+        var source, destination;
+        var directionsDisplay;
+        var directionsService = new google.maps.DirectionsService();
+
+        var qs = (function (a) {
+            if (a == "") return {};
+            var b = {};
+            for (var i = 0; i < a.length; ++i) {
+                var p = a[i].split('=', 2);
+                if (p.length == 1)
+                    b[p[0]] = "";
+                else
+                    b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+            }
+            return b;
+        })(window.location.search.substr(1).split('&'));
+
+
+
+        google.maps.event.addDomListener(window, 'load', function () {
+            directionsDisplay = new google.maps.DirectionsRenderer({ 'draggable': true });
+
+
+
+
+            var pune = new google.maps.LatLng(18.5204, 73.8567);
+            var mapOptions = {
+                zoom: 7,
+                center: pune
+            };
+            map = new google.maps.Map(document.getElementById('divMap'), mapOptions);
+            directionsDisplay.setMap(map);
+
+            source = qs["from"];
+            destination = qs["to"];
+
+
+            var request = {
+                origin: source,
+                destination: destination,
+                travelMode: google.maps.TravelMode.DRIVING
+            };
+
+            directionsService.route(request, function (response, status) {
+                if (status == google.maps.DirectionsStatus.OK) {
+                    directionsDisplay.setDirections(response);
+                }
+            });
+
+            var service = new google.maps.DistanceMatrixService();
+            service.getDistanceMatrix({
+                origins: [source],
+                destinations: [destination],
+                travelMode: google.maps.TravelMode.DRIVING,
+                unitSystem: google.maps.UnitSystem.METRIC,
+                avoidHighways: false,
+                avoidTolls: false
+            }, function (response, status) {
+                if (status == google.maps.DistanceMatrixStatus.OK && response.rows[0].elements[0].status != "ZERO_RESULTS") {
+
+                } else {
+                    alert("Unable to find the distance via road.");
+                }
+            });
+
+        });
+
+    </script>
+
+
 </body>
 </html>

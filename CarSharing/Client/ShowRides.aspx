@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ShowRides.aspx.cs" Inherits="CarSharing.Client.ShowRides" %>
 
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -56,6 +58,7 @@
     </script>
 
     <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -95,23 +98,34 @@
                     <div class="col-lg-2"></div>
                     <div runat="server" class="col-lg-8">
                         <h1 style="color:white">Rides</h1>
-                        <div style="height:70px;background-color:wheat;margin-bottom:10px">
+                        <div class="row" style="background-color:wheat;margin-bottom:10px">
                             <div class="form-group">
-                                <div class="col-lg-1"></div>
-                              
-                                <div class="col-lg-4">
-                                Source: <asp:TextBox ID="txtsource" runat="server" class="form-control"></asp:TextBox>
-                                </div>
-                                <div class="col-lg-4">
-                                  Destination:  <asp:TextBox ID="txtdest" runat="server" class="form-control"></asp:TextBox>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        Source: <asp:TextBox ID="txtsource" runat="server" class="form-control"></asp:TextBox>
+                                    </div>
                                 </div>
                                 <div class="col-lg-3">
-                                    <label>   </label>
-                                    <asp:Button class="btn btn-info" runat="server" Text="Search" ID="btnSearch" OnClick="btnSearch_Click" />
+                                    <div class="form-group">
+                                        Destination:  <asp:TextBox ID="txtdest" runat="server" class="form-control"></asp:TextBox>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        Date:  <asp:TextBox ID="txtdate" style="background-color:#fff" class="form-control" CssClass="disable_past_dates form-control" placeholder="MM/DD/YYYY" ReadOnly="true" runat="server"></asp:TextBox>
+                                        <cc1:CalendarExtender ID="txtdate_CalendarExtender" runat="server" TargetControlID="txtdate">
+                                        </cc1:CalendarExtender>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <asp:Button class="btn btn-info" runat="server" Text="Search" ID="btnSearch" OnClick="btnSearch_Click" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="divtag" runat="server">
+                        <div id="divtag" class="row" runat="server">
 
                             
                         </div>
