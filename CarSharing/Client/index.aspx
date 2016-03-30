@@ -38,7 +38,6 @@
             });
         });
 
-        
         function selectedDate(sender, args)
         {
             
@@ -48,16 +47,21 @@
             var date = $('#<%= TextBox1.ClientID  %>').val();
             var fromDest = $('#<%= txtfrom.ClientID %>').val();
             var toDest = $('#<%= txtto.ClientID %>').val();
-           
-                alert();
-                window.location.replace("ShowRides.aspx?from=" + fromDest + "&to=" + toDest + "&date=" + date);
-           
-           
+
+            window.location.replace("ShowRides.aspx?from=" + fromDest + "&to=" + toDest + "&date=" + date);
             return false;
         }
         function ridepost()
         {
             window.location = "CreateRide.aspx";
+            return false;
+        }
+
+        function clearForm()
+        {
+            document.getElementById("txtfrom").value = null;
+            document.getElementById("txtto").value = null;
+            document.getElementById("TextBox1").value = null;
             return false;
         }
 
@@ -124,15 +128,15 @@
                         <label class="col-lg-3" for="txtdate">Date :</label>
                         <div class="col-lg-9">
                             <script src="../Files/My/Calender.min.js" type="text/javascript"></script>
-                            <asp:TextBox ID="TextBox1" CssClass="disable_past_dates form-control" placeholder="MM/DD/YYYY" ReadOnly="true" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="TextBox1" style="background-color:#fff" CssClass="disable_past_dates form-control" placeholder="MM/DD/YYYY" ReadOnly="true" runat="server"></asp:TextBox>
                             <asp:CalendarExtender ID="TextBox1_CalendarExtender" OnClientDateSelectionChanged="selectedDate" runat="server" TargetControlID="TextBox1"></asp:CalendarExtender>
                         </div>
                     </div>
                     
                 </div>
                 <div class="panel-footer">
-                    <asp:Button ID="btnsubmit" runat="server" OnClientClick="return setValue()" Text="Submit" class="btn btn-primary" />
-                    <asp:Button ID="btnClear" runat="server" Text="Clear" class="btn btn-primary" />
+                    <button type="submit" runat="server" onclick="return setValue()" class="btn btn-primary">Submit</button>
+                    <button type="button" onclick="return clearForm()" class="btn btn-primary">Clear</button>
                 </div>
             </div>
 
