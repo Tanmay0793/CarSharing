@@ -65,7 +65,7 @@ namespace CarSharing.Client
                 sda.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
-                    Response.Write("<script> alert('Requested') </script>");
+                    Response.Write("<script> alert('Form is Requested') </script>");
                     Response.Redirect("index.aspx");
                 }
             }

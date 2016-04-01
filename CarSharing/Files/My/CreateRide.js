@@ -1,6 +1,4 @@
 ﻿
-
-
 $(document).ready(function () {
     $("#return").hide();
     $("#divreturn").hide();
