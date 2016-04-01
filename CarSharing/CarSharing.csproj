@@ -64,6 +64,7 @@
     <Content Include="Admin\Login.aspx" />
     <Content Include="Admin\ModifyAdmin.aspx" />
     <Content Include="Admin\Profile.aspx" />
+    <Content Include="Admin\ShowUsers.aspx" />
     <Content Include="CarSharing.asmx" />
     <Content Include="Client\CreateRide.aspx" />
     <Content Include="Client\ForgotPassword.aspx" />
@@ -229,6 +230,7 @@
     <Content Include="Files\My\DemoQury.css" />
     <Content Include="Files\My\Google.js" />
     <Content Include="Files\My\index.css" />
+    <Content Include="Files\My\Profile.css" />
     <Content Include="Files\My\Validation.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -330,6 +332,13 @@
     </Compile>
     <Compile Include="Admin\Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ShowUsers.aspx.cs">
+      <DependentUpon>ShowUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ShowUsers.aspx.designer.cs">
+      <DependentUpon>ShowUsers.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Transport.aspx.cs">
       <DependentUpon>Transport.aspx</DependentUpon>

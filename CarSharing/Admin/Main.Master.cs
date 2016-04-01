@@ -15,7 +15,7 @@ namespace CarSharing
         {
             if(!IsPostBack)
             {
-                if (Session["name"] != null)
+                if (Session["name"] != null && Session["id"]!=null)
                 {
 
                     lblprofile.Text = Session["name"].ToString();

@@ -1,0 +1,11 @@
+﻿.form-name {
+    background-color: #fff;
+    background-image: none;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    height: 34px;
+    line-height:0;
+    padding: 6px 12px;
+    width: 100%;
+}

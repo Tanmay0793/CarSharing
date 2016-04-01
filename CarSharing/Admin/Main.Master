@@ -101,7 +101,7 @@
                             <span>Site User</span>
                         </a>
                         <ul class="sub">
-                            <li><a href="userList.aspx">Show Users</a></li>
+                            <li><a href="ShowUsers.aspx">Show Users</a></li>
                         </ul>
                     </li>
                     <li class="sub-menu">
