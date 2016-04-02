@@ -61,6 +61,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\ForgotAdmin.aspx" />
     <Content Include="Admin\Login.aspx" />
     <Content Include="Admin\ModifyAdmin.aspx" />
     <Content Include="Admin\Profile.aspx" />
@@ -230,6 +231,9 @@
     <Content Include="Files\My\Google.js" />
     <Content Include="Files\My\index.css" />
     <Content Include="Files\My\Validation.js" />
+    <Content Include="images\login.jpg" />
+    <Content Include="images\logo.jpg" />
+    <Content Include="images\spped.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -295,6 +299,13 @@
     </Compile>
     <Compile Include="Admin\carDetails.aspx.designer.cs">
       <DependentUpon>carDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ForgotAdmin.aspx.cs">
+      <DependentUpon>ForgotAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ForgotAdmin.aspx.designer.cs">
+      <DependentUpon>ForgotAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -435,9 +446,7 @@
       <DependentUpon>SignUp.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="images\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

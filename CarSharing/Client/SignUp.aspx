@@ -41,12 +41,13 @@
     </script>
 
 </head>
-<body>
-    <div class="container-fluid" style="padding-top: 35px">
+<body style="background-image:url('/../images/spped.jpg')">
+    <div class="container-fluid" style="padding-top: 5px">
         <div class="col-md-4"></div>
         <div class="col-md-4">
+             <asp:Image runat="server" ImageUrl="~/images/logo.jpg" class="img img-responsive" Height="80" Width="700" />
             <form role="form" runat="server">
-                <div class="panel panel-primary">
+                <div class="panel panel-primary" style="margin-top:10px">
                     <asp:ScriptManager runat="server" EnablePageMethods="true"></asp:ScriptManager>
                     <div class="panel-heading">Sign Up</div>
                     <div class="panel-body">
@@ -74,7 +75,7 @@
                         <label for="txtpass">Password:</label>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                            <asp:TextBox ID="pass" runat="server" class="form-control" placeholder="Enter pass"></asp:TextBox>
+                            <asp:TextBox ID="pass" TextMode="Password" runat="server" class="form-control" placeholder="Enter pass"></asp:TextBox>
                         </div>
                         <asp:Label ID="lblpass" runat="server" class="pull-right" ForeColor="Red"></asp:Label><br />
                         <label for="txtrepass">Re-Enter Password:</label>
@@ -86,7 +87,7 @@
                     </div>
                     <div class="panel-footer">
                         <asp:Button ID="btnregister" class="btn btn-primary" runat="server" OnClientClick="return getValue()" Text="Register" />
-                        <asp:Button ID="btnLogin" class="btn btn-primary" runat="server" OnClientClick="return trans()" Text="Back to Login" />
+                        
                     </div>
                 </div>
             </form>

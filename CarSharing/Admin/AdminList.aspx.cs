@@ -23,7 +23,7 @@ namespace CarSharing.Admin
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnStringDb"].ToString());
             SqlCommand cmd = new SqlCommand();
-            SqlDataAdapter sda = new SqlDataAdapter("select * from Users", con);
+            SqlDataAdapter sda = new SqlDataAdapter("select * from Users where usertype='Admin'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             grid1.DataSource = dt;

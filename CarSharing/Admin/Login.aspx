@@ -39,12 +39,14 @@
 
 
 </head>
-<body runat="server">
+<body runat="server" style="background-image:url('/../images/spped.jpg')">
     <div class="container-fluid bg-1 text-center">
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4">
-                <div class="panel panel-default">
+                <asp:Image runat="server" ImageUrl="~/images/logo.jpg" class="img img-responsive" Height="150" Width="700" />
+
+                <div class="panel panel-primary" style="margin-top:20px">
                     <div  class="panel-heading">Login</div>
                     <div class="panel-body">
                         <form role="form" runat="server" method="post">
@@ -66,15 +68,15 @@
                              <br />
                             <div>
                                 <asp:CheckBox ID="chkbox" class="pull-left" Text="Remember Me" runat="server" />
-                                <a href="ForgotAdmin" style="float:right" >Forgot Password</a>
+                                <a href="ForgotAdmin.aspx" style="float:right;color:black" >Forgot Password</a>
                             </div>
                             <br />
                             <asp:Label ID="lblError" runat="server" style="color:red;background-color:black" Visible="true"></asp:Label>
                             <br />
                             
-                            <button type="submit" id="submit" class="btn btn-success pull-right" style="color:black;background-color:transparent"  onclick="return getValue()">Login</button>
+                            <button type="submit" id="submit" class="btn btn-primary pull-right"  onclick="return getValue()">Login</button>
                             
-                            <asp:Button ID="btnSignUp" class="btn btn-default btn-success pull-right" style="color:black" BackColor="Transparent" Text="Sign Up" runat="server" />
+                            <asp:Button ID="btnSignUp" class="btn btn-default btn-success" style="margin-left:230px" Text="Sign Up" runat="server" />
                        
                         </form>
                     </div>

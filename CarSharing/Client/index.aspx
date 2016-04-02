@@ -129,7 +129,7 @@
                         <div class="col-lg-9">
                             <script src="../Files/My/Calender.min.js" type="text/javascript"></script>
                             <asp:TextBox ID="TextBox1" style="background-color:#fff" CssClass="disable_past_dates form-control" placeholder="MM/DD/YYYY" ReadOnly="true" runat="server"></asp:TextBox>
-                            <asp:CalendarExtender ID="TextBox1_CalendarExtender" OnClientDateSelectionChanged="selectedDate" runat="server" TargetControlID="TextBox1"></asp:CalendarExtender>
+                            <asp:CalendarExtender ID="TextBox1_CalendarExtender" Format="dd/MM/yyyy" OnClientDateSelectionChanged="selectedDate" runat="server" TargetControlID="TextBox1"></asp:CalendarExtender>
                         </div>
                     </div>
                     
