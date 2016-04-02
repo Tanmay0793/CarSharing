@@ -233,7 +233,7 @@
     <Content Include="Files\My\Validation.js" />
     <Content Include="images\login.jpg" />
     <Content Include="images\logo.jpg" />
-    <Content Include="images\spped.jpg" />
+    <Content Include="Admin\spped.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
