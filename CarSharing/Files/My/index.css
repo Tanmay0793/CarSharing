@@ -19,6 +19,17 @@ margin-top:50px;
 
 }
 
+#backRent {
+      background-image:url('/../Files/My/CarRent.jpg');
+    height:600px;
+    background-repeat:no-repeat;
+    background-position:center center;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+}
+
 
 #divRideback {
     background-image:url('/../Files/My/Back.jpg');

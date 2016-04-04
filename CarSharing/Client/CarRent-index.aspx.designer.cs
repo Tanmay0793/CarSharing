@@ -10,24 +10,33 @@
 namespace CarSharing.Client {
     
     
-    public partial class ForgotPassword {
+    public partial class CarRent_index {
         
         /// <summary>
-        /// txtemail control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtemail;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// submit control.
+        /// l3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button submit;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl l3;
+        
+        /// <summary>
+        /// l4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl l4;
     }
 }

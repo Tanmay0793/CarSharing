@@ -66,6 +66,7 @@
     <Content Include="Admin\Profile.aspx" />
     <Content Include="Admin\ShowUsers.aspx" />
     <Content Include="CarSharing.asmx" />
+    <Content Include="Client\CarRent-index.aspx" />
     <Content Include="Client\CreateRide.aspx" />
     <Content Include="Client\ForgotPassword.aspx" />
     <Content Include="Client\index.aspx" />
@@ -221,6 +222,8 @@
     <Content Include="Client\Login.aspx" />
     <Content Include="Client\Registration.aspx" />
     <Content Include="Client\SignUp.aspx" />
+    <Content Include="Files\My\CarRent.jpg" />
+    <Content Include="Files\My\car_sharing.jpg" />
     <Content Include="Files\My\Login.css" />
     <Content Include="Files\My\Login.jpg" />
     <Content Include="Files\My\Back.jpg" />
@@ -232,6 +235,8 @@
     <Content Include="Files\My\index.css" />
     <Content Include="Files\My\Profile.css" />
     <Content Include="Files\My\Validation.js" />
+    <Content Include="images\Car rent.jpg" />
+    <Content Include="Report.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -351,6 +356,13 @@
       <DependentUpon>CarSharing.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Client\CarRent-index.aspx.cs">
+      <DependentUpon>CarRent-index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\CarRent-index.aspx.designer.cs">
+      <DependentUpon>CarRent-index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Client\CreateRide.aspx.cs">
       <DependentUpon>CreateRide.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -444,9 +456,7 @@
       <DependentUpon>SignUp.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="images\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
