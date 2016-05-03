@@ -63,7 +63,7 @@
                                   <option selected="selected">Sedan</option>
                                   <option>Van</option>
                                   <option>SUV</option>
-                                  <option>Luxury Car</option>
+                                  
                                   <option>HatchBack</option>
                                </select>
                              </div>
@@ -88,12 +88,12 @@
                                   <option>TWO</option>
                                   <option>THREE</option>
                                   <option>FOUR</option>
-                                  <option>FIVE</option>
+                                  
                                </select>
                            </div>
                        </div><br /><br />
                         <div class="form-group">
-                            <label class="col-lg-3 control-label" for="chkstatus">Status</label>
+                            <label class="col-lg-3 control-label" for="chkstatus"> Status </label>
                             <div class="col-lg-9">
                                     <label class="checkbox-inline">
                                         <input type="checkbox" id="checkActive" value="Active" checked="checked" /> Active

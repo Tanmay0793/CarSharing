@@ -15,28 +15,7 @@
 </head>
 <body>
 
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
-    <script type="text/javascript">
-            
-        var lat1; var long1; var lat2; var long2;
-        var date;
-        google.maps.event.addDomListener(window, 'load', function () {
-            var places = new google.maps.places.Autocomplete(document.getElementById('txtfrom'));
-            var toplace = new google.maps.places.Autocomplete(document.getElementById('txtto'));
-
-            google.maps.event.addListener(places, 'place_changed', function () {
-                var place = places.getPlace();
-                from = place.formatted_address;
-                lat1 = place.geometry.location.lat();
-                long1 = place.geometry.location.lng();
-            });
-            google.maps.event.addListener(toplace, 'place_changed', function () {
-                var place = toplace.getPlace();
-                to = place.formatted_address;
-                lat2 = place.geometry.location.lat();
-                long2 = place.geometry.location.lng();
-            });
-        });
+   
 
         function selectedDate(sender, args)
         {
@@ -171,7 +150,28 @@
             <br />
             <br />
         </div>
-  
+   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+    <script type="text/javascript">
+            
+        var lat1; var long1; var lat2; var long2;
+        var date;
+        google.maps.event.addDomListener(window, 'load', function () {
+            var places = new google.maps.places.Autocomplete(document.getElementById('txtfrom'));
+            var toplace = new google.maps.places.Autocomplete(document.getElementById('txtto'));
+
+            google.maps.event.addListener(places, 'place_changed', function () {
+                var place = places.getPlace();
+                from = place.formatted_address;
+                lat1 = place.geometry.location.lat();
+                long1 = place.geometry.location.lng();
+            });
+            google.maps.event.addListener(toplace, 'place_changed', function () {
+                var place = toplace.getPlace();
+                to = place.formatted_address;
+                lat2 = place.geometry.location.lat();
+                long2 = place.geometry.location.lng();
+            });
+        });
     </form>
 </body>
 </html>
